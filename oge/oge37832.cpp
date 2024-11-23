@@ -8,7 +8,6 @@ int main()
 {
     cout << "Введите количество чисел:";
     cin >> s;
-
     int arr[s] = {};
 
     int c = 0;
