@@ -26,12 +26,13 @@ int main()
             cout << "Это число слишком большое!" << endl;
     }
 
-    for (int j = 0; j < s; j++)
+    for (int j = 1; j <= s; j++)
     {
         if (arr[j] % 4 == 0)
         {
             k += 1;
         }
+        
     }
 
     cout << k << endl;
