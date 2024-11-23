@@ -6,7 +6,7 @@ int main()
 int size = 0;
 int number = 0;
 int minn = 30000;
-cout << "Введите количество чисел:";
+cout << "Введите количество чисел: ";
 cin >> size;
 int arr[size] = {};
 int c = 0;
@@ -24,7 +24,6 @@ for (int j = 1; j <= size; j++)
         {
             minn = arr[j];
         }
-        
     }
     
 }
