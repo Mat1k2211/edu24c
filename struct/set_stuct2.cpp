@@ -13,7 +13,7 @@ struct Employee
 
 int main()
 {
-    Employee Matvey {"Matvey", "oscar-pc10", "The Palace of Children's creativity 4", 79870130394, "soloncovmatvey@gmail.com"};
+    Employee Matvey {"Matvey", "oscar-pc10", "The Palace of Children's creativity 4", 1238892112, "soloncovmatvey@gmail.com"};
 
     cout << "Name: " << Matvey.name << endl;
     cout << "Id pc: " << Matvey.id_pc << endl;
