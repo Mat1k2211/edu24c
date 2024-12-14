@@ -8,63 +8,62 @@ struct Student
     double averageGrade;
 };
 
-void PrintStudents(Student *s)
-{   
-    for (int i = 0; i < 5; ++i)
-    {
-        cout << s[i].name << endl;
-        cout << s[i].groupNumber << endl;
-        cout << s[i].averageGrade << endl;
-    }
-}
+Student MGU[] = 
+{
+    {"Ivan", 104,     3.8},
+    {"Jenia", 104,    4.2},
+    {"Viktoria", 101, 4.0},
+    {"Vitia", 101,    4.7},
+    {"Matvey", 104,   4.8}
+};
 
-void PrintStudents2(Student *s)
-{   
-    for (int l = 0; l < 5; ++l)
+void averageGradeAll()
+{
+    double result{};
+    for (int i = 0; i < 5; i++)
     {
-        cout << s[l].name << endl;
-        cout << s[l].groupNumber << endl;
-        cout << s[l].averageGrade << endl;
+        result = result + MGU[i].averageGrade;
     }
 
-    double arr[5] = {};
+    cout << result << endl;
+    cout << "result: " << (result / 5.0) << endl;
+
+    double arr[5];
+
     for (int j = 0; j < 5; j++)
     {
-        arr[j] = s[j].averageGrade;
+        arr[j] = MGU[j].averageGrade;
     }
 
-    double buffer{};
-    for (int k = 0; k < 5; k++)
+    for(int l = 0; l < 5; l++)
     {
-        for (int kk = 0; kk < 5; kk++)
+        cout << arr[l] << " ";
+    }
+
+    cout << endl;
+
+    double buffer{};
+    for (int y = 0; y < 5; y++)
+    {
+        for (int k = 0; k < 5; k++)
         {
-            if (arr[kk] < arr[kk + 1])
+            if (arr[k] < arr[k + 1])
             {
-                buffer = arr[kk];
-                arr[kk] = arr[kk + 1];
-                arr[kk + 1] = buffer;
+                buffer = arr[k];
+                arr[k] = arr[k + 1];
+                arr[k + 1] = buffer;
             }
         }
     }
 
-    for (int y = 0; y < 5; y++)
+    for(int l = 0; l < 5; l++)
     {
-        cout << arr[y] << ", ";
+        cout << arr[l] << " ";
     }
 }
 
 int main()
 {
-    Student MGU[] = 
-    {
-        {"Misha", 101, 4.5},
-        {"Ivan", 102, 3.8},
-        {"Maria", 103, 4.2},
-        {"Petr", 107, 5.0},
-        {"Matvey", 105, 5.2}
-    };
-    
-    PrintStudents2(MGU);
-    
+    averageGradeAll();
     return 0;
 }
