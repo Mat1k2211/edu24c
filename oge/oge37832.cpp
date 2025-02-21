@@ -16,15 +16,7 @@ int main()
     {
         cout << "Введи " << i << " число: ";
         cin >> c;
-
-        if (c < 30000)
-        {
-            arr[i] = c;
-        }
-        else
-            arr[i] = 1;
-            cout << "Это число слишком большое!" << endl;
-            
+        arr[i] = c;
     }
 
     for (int j = 1; j <= s; j++)
